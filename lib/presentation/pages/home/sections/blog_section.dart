@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dots_indicator/dots_indicator.dart';
-import 'package:flutter/material.dart' hide CarouselController;
+import 'package:flutter/material.dart';
 import 'package:nimbus/presentation/layout/adaptive.dart';
 import 'package:nimbus/presentation/widgets/blog_card.dart';
 import 'package:nimbus/presentation/widgets/buttons/nimbus_button.dart';
@@ -21,8 +21,8 @@ class BlogSection extends StatefulWidget {
 
 class _BlogSectionState extends State<BlogSection> {
   final int blogLength = Data.blogData.length;
-  double currentPageIndex = 1;
-  CarouselController _carouselController = CarouselController();
+  int currentPageIndex = 1;
+  CarouselSliderController _carouselController = CarouselSliderController();
 
   @override
   Widget build(BuildContext context) {
@@ -220,7 +220,7 @@ class _BlogSectionState extends State<BlogSection> {
         scrollPhysics: scrollPhysics,
         onPageChanged: (int index, CarouselPageChangedReason reason) {
           setState(() {
-            currentPageIndex = index.toDouble();
+            currentPageIndex = index;
           });
         });
   }
@@ -252,7 +252,7 @@ class _BlogSectionState extends State<BlogSection> {
 
   Widget _buildDotsIndicator({
     required int pageLength,
-    required double currentIndex,
+    required int currentIndex,
   }) {
     return Container(
       child: DotsIndicator(
@@ -284,7 +284,7 @@ class _BlogSectionState extends State<BlogSection> {
 
   _moveToNextCarousel(int index) {
     setState(() {
-      currentPageIndex = index.toDouble();
+      currentPageIndex = index;
       _carouselController.animateToPage(index);
     });
   }
