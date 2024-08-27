@@ -25,10 +25,8 @@ class StringConst {
   static const String POSITION = "UI/UX Designer";
   static const String ABOUT_DEV =
       "Product Designer and Digital Creative Director working in design field for 13 years so far, specialized in UI/UX, Branding and digital designs.";
-  static const String ABOUT_ME_1 =
-      "Product Designer and Digital Creative Director working in design field for";
-  static const String ABOUT_ME_2 =
-      "13 years so far, specialized in UI/UX, Branding and digital designs.";
+  static const String ABOUT_ME_1 = "Product Designer and Digital Creative Director working in design field for";
+  static const String ABOUT_ME_2 = "13 years so far, specialized in UI/UX, Branding and digital designs.";
   static const String DOWNLOAD_CV = "Download CV";
   static const String EMAIL = "Email";
   static const String DEV_EMAIL_2 = "nimbus2000@mail.com";
@@ -55,16 +53,11 @@ class StringConst {
   static const String ABOUT_ME = "about me";
   static const String ABOUT_ME_DESC =
       "Product Designer and Digital Creative Director working in design field for 13 years so far, specialized in UI/UX, Branding and digital designs. These are the words we live by in everything we do. Every story we tell, every brand we build, and every interaction we create must not only look beautiful. beautifully, too.";
-  static const String ABOUT_ME_DESC_1 =
-      "Product Designer and Digital Creative Director working in design ";
-  static const String ABOUT_ME_DESC_2 =
-      "field for 13 years so far, specialized in UI/UX, Branding and digital";
-  static const String ABOUT_ME_DESC_3 =
-      "designs. These are the words we live by in everything we do. Every";
-  static const String ABOUT_ME_DESC_4 =
-      "story we tell, every brand we build, and every interaction we";
-  static const String ABOUT_ME_DESC_5 =
-      "create must not only look beautiful. beautifully, too.";
+  static const String ABOUT_ME_DESC_1 = "Product Designer and Digital Creative Director working in design ";
+  static const String ABOUT_ME_DESC_2 = "field for 13 years so far, specialized in UI/UX, Branding and digital";
+  static const String ABOUT_ME_DESC_3 = "designs. These are the words we live by in everything we do. Every";
+  static const String ABOUT_ME_DESC_4 = "story we tell, every brand we build, and every interaction we";
+  static const String ABOUT_ME_DESC_5 = "create must not only look beautiful. beautifully, too.";
   static const String CREATIVE_DESIGN = "Need Creative Design?";
   static const String HELP = "I can Help You!";
   static const String FOLLOW_ME_1 = "You can also follow me here:";
@@ -84,17 +77,13 @@ class StringConst {
   static const String TOOLS_3_NAME = "Sketch";
   static const String TOOLS_3_PROFICIENCY = "70%";
   static const String SKILLS_1 = "UI/UX Design";
-  static const String SKILLS_1_DESC =
-      "We believe direct collaboration with our clients is essential to bringing unique";
+  static const String SKILLS_1_DESC = "We believe direct collaboration with our clients is essential to bringing unique";
   static const String SKILLS_2 = "Graphic Design";
-  static const String SKILLS_2_DESC =
-      "We believe direct collaboration with our clients is essential to bringing unique";
+  static const String SKILLS_2_DESC = "We believe direct collaboration with our clients is essential to bringing unique";
   static const String SKILLS_3 = "Motion Design";
-  static const String SKILLS_3_DESC =
-      "We believe direct collaboration with our clients is essential to bringing unique";
+  static const String SKILLS_3_DESC = "We believe direct collaboration with our clients is essential to bringing unique";
   static const String SKILLS_4 = "Photo Retouch";
-  static const String SKILLS_4_DESC =
-      "We believe direct collaboration with our clients is essential to bringing unique";
+  static const String SKILLS_4_DESC = "We believe direct collaboration with our clients is essential to bringing unique";
 
   //Stats Section
   static const String HAPPY_CLIENTS = "Happy Clients";
@@ -186,7 +175,7 @@ class StringConst {
   static const String FOLLOW_ME_2_URL = "behance.net/nimbus2000";
   static const String RIGHTS_RESERVED = "© 2021 All rights reserved";
   static const String BUILT_BY = "Built with Flutter by";
-  static const String DAVID_COBBINA = "David Cobbina";
+  static const String author = "David Cobbina";
   static const String DESIGNED_BY = "Designed by";
   static const String WEB_GENIUS_LAB = "WebGeniusLab";
   static const String MADE_IN_GHANA = "Made in";
@@ -203,6 +192,5 @@ class StringConst {
   static const String FACEBOOK_URL = "https://facebook.com/";
   static const String TWITTER_URL = "http://twitter.com/";
   static const String DAVID_LEGEND_URL = "https://davidcobbina.com/#/";
-  static const String DESIGN_URL =
-      "https://www.behance.net/gallery/95351691/Resume-Design-03";
+  static const String DESIGN_URL = "https://www.behance.net/gallery/95351691/Resume-Design-03";
 }

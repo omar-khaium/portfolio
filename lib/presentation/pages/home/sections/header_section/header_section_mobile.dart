@@ -4,7 +4,6 @@ import 'package:nimbus/presentation/layout/adaptive.dart';
 import 'package:nimbus/presentation/pages/home/sections/header_section/widgets.dart';
 import 'package:nimbus/presentation/widgets/buttons/nimbus_button.dart';
 import 'package:nimbus/presentation/widgets/content_area.dart';
-import 'package:nimbus/presentation/widgets/buttons/nimbus_button_link.dart';
 import 'package:nimbus/presentation/widgets/spaces.dart';
 import 'package:nimbus/values/values.dart';
 
@@ -21,8 +20,7 @@ class HeaderSectionMobile extends StatefulWidget {
   _HeaderSectionMobileState createState() => _HeaderSectionMobileState();
 }
 
-class _HeaderSectionMobileState extends State<HeaderSectionMobile>
-    with SingleTickerProviderStateMixin {
+class _HeaderSectionMobileState extends State<HeaderSectionMobile> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
 
   @override
@@ -53,10 +51,8 @@ class _HeaderSectionMobileState extends State<HeaderSectionMobile>
     double headerIntroTextSize = Sizes.TEXT_SIZE_24;
     double screenWidth = widthOfScreen(context) - (sidePadding * 2);
     double contentAreaWidth = screenWidth;
-    TextStyle? bodyTextStyle =
-        textTheme.bodyText1?.copyWith(fontSize: bodyTextSizeSm);
-    TextStyle? socialTitleStyle =
-        textTheme.subtitle1?.copyWith(fontSize: socialTextSizeSm);
+    TextStyle? bodyTextStyle = textTheme.bodyMedium?.copyWith(fontSize: bodyTextSizeSm);
+    TextStyle? socialTitleStyle = textTheme.titleMedium?.copyWith(fontSize: socialTextSizeSm);
 
     double buttonWidth = 80;
     double buttonHeight = 48;
@@ -64,8 +60,7 @@ class _HeaderSectionMobileState extends State<HeaderSectionMobile>
     double sizeOfBlobSm = screenWidth * 0.4;
     double sizeOfGoldenGlobe = screenWidth * 0.3;
     double dottedGoldenGlobeOffset = sizeOfBlobSm * 0.4;
-    double heightOfBlobAndGlobe =
-        computeHeight(dottedGoldenGlobeOffset, sizeOfGoldenGlobe, sizeOfBlobSm);
+    double heightOfBlobAndGlobe = computeHeight(dottedGoldenGlobeOffset, sizeOfGoldenGlobe, sizeOfBlobSm);
     double heightOfStack = heightOfBlobAndGlobe * 2;
     double blobOffset = heightOfStack * 0.3;
     return ContentArea(
@@ -120,15 +115,14 @@ class _HeaderSectionMobileState extends State<HeaderSectionMobile>
                     margin: EdgeInsets.only(top: heightOfStack * 0.1),
                     child: SelectableText(
                       StringConst.FIRST_NAME,
-                      style: textTheme.headline1?.copyWith(
+                      style: textTheme.displayLarge?.copyWith(
                         color: AppColors.grey50,
                         fontSize: headerIntroTextSize * 2.5,
                       ),
                     ),
                   ),
                   Container(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: sidePadding),
+                    padding: const EdgeInsets.symmetric(horizontal: sidePadding),
                     margin: EdgeInsets.only(top: heightOfStack * 0.3),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
@@ -138,14 +132,13 @@ class _HeaderSectionMobileState extends State<HeaderSectionMobile>
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             ConstrainedBox(
-                              constraints:
-                                  BoxConstraints(maxWidth: screenWidth),
+                              constraints: BoxConstraints(maxWidth: screenWidth),
                               child: AnimatedTextKit(
                                 animatedTexts: [
                                   TypewriterAnimatedText(
                                     StringConst.INTRO,
                                     speed: Duration(milliseconds: 60),
-                                    textStyle: textTheme.headline2?.copyWith(
+                                    textStyle: textTheme.displayMedium?.copyWith(
                                       fontSize: headerIntroTextSize,
                                     ),
                                   ),
@@ -156,14 +149,13 @@ class _HeaderSectionMobileState extends State<HeaderSectionMobile>
                               ),
                             ),
                             ConstrainedBox(
-                              constraints:
-                                  BoxConstraints(maxWidth: screenWidth),
+                              constraints: BoxConstraints(maxWidth: screenWidth),
                               child: AnimatedTextKit(
                                 animatedTexts: [
                                   TypewriterAnimatedText(
                                     StringConst.POSITION,
                                     speed: Duration(milliseconds: 80),
-                                    textStyle: textTheme.headline2?.copyWith(
+                                    textStyle: textTheme.displayMedium?.copyWith(
                                       fontSize: headerIntroTextSize,
                                       color: AppColors.primaryColor,
                                       height: 1.2,
@@ -177,8 +169,7 @@ class _HeaderSectionMobileState extends State<HeaderSectionMobile>
                             ),
                             SpaceH16(),
                             ConstrainedBox(
-                              constraints:
-                                  BoxConstraints(maxWidth: screenWidth * 0.5),
+                              constraints: BoxConstraints(maxWidth: screenWidth * 0.5),
                               child: SelectableText(
                                 StringConst.ABOUT_DEV,
                                 style: bodyTextStyle?.copyWith(

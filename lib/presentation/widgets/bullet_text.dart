@@ -23,7 +23,7 @@ class TextWithBullet extends StatelessWidget {
         Text(
           text,
           style: textStyle ??
-              textTheme.bodyText1?.copyWith(
+              textTheme.bodyMedium?.copyWith(
                 color: AppColors.primaryText2,
               ),
         ),
@@ -50,9 +50,7 @@ class Bullet extends StatelessWidget {
     return Container(
       width: width,
       height: height,
-      decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.all(Radius.circular(borderRadius))),
+      decoration: BoxDecoration(color: color, borderRadius: BorderRadius.all(Radius.circular(borderRadius))),
     );
   }
 }

@@ -4,7 +4,6 @@ import 'package:nimbus/presentation/widgets/buttons/social_button_2.dart';
 import 'package:nimbus/presentation/widgets/content_area.dart';
 import 'package:nimbus/presentation/widgets/empty.dart';
 import 'package:nimbus/presentation/widgets/nimbus_info_section.dart';
-import 'package:nimbus/presentation/widgets/nimbus_link.dart';
 import 'package:nimbus/presentation/widgets/spaces.dart';
 import 'package:nimbus/utils/functions.dart';
 import 'package:nimbus/values/values.dart';
@@ -22,8 +21,7 @@ class AboutMeSection extends StatefulWidget {
   _AboutMeSectionState createState() => _AboutMeSectionState();
 }
 
-class _AboutMeSectionState extends State<AboutMeSection>
-    with TickerProviderStateMixin {
+class _AboutMeSectionState extends State<AboutMeSection> with TickerProviderStateMixin {
   late AnimationController _scaleController;
   late Animation<double> _scaleAnimation;
   late AnimationController _fadeInController;
@@ -171,7 +169,7 @@ class _AboutMeSectionState extends State<AboutMeSection>
   Widget _buildImage({required double width, required double height}) {
     TextTheme textTheme = Theme.of(context).textTheme;
     double fontSize = responsiveSize(context, 60, 72, md: 64);
-    TextStyle? titleStyle = textTheme.bodyText1?.merge(
+    TextStyle? titleStyle = textTheme.bodyMedium?.merge(
       Styles.customTextStyle3(fontSize: fontSize, height: 1.25),
     );
 
@@ -310,7 +308,7 @@ class _AboutMeSectionState extends State<AboutMeSection>
                   children: [
                     Text(
                       StringConst.FOLLOW_ME_1,
-                      style: textTheme.headline6?.copyWith(
+                      style: textTheme.headlineSmall?.copyWith(
                         color: AppColors.black,
                       ),
                     ),
@@ -344,7 +342,7 @@ class _AboutMeSectionState extends State<AboutMeSection>
         children: [
           Text(
             StringConst.FOLLOW_ME_1,
-            style: textTheme.headline6?.copyWith(color: AppColors.black),
+            style: textTheme.headlineSmall?.copyWith(color: AppColors.black),
           ),
           SpaceH16(),
           Wrap(

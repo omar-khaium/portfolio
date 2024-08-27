@@ -134,7 +134,7 @@ List<Widget> buildCardRow({
         title: Flexible(
           child: SelectableText(
             data[index].title,
-            style: textTheme.subtitle1?.copyWith(
+            style: textTheme.titleMedium?.copyWith(
               fontSize: responsiveSize(
                 context,
                 Sizes.TEXT_SIZE_16,
@@ -146,7 +146,7 @@ List<Widget> buildCardRow({
         subtitle: Flexible(
           child: SelectableText(
             data[index].subtitle,
-            style: textTheme.bodyText1?.copyWith(
+            style: textTheme.bodyMedium?.copyWith(
                 fontSize: responsiveSize(
               context,
               Sizes.TEXT_SIZE_14,

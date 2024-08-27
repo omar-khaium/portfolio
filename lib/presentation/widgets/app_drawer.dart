@@ -98,12 +98,10 @@ class _AppDrawerState extends State<AppDrawer> {
           title: menuList[i].name,
           isMobile: true,
           isSelected: menuList[i].isSelected,
-          titleStyle: textTheme.bodyText1?.copyWith(
-            color:
-                menuList[i].isSelected ? AppColors.primary200 : AppColors.white,
+          titleStyle: textTheme.bodyMedium?.copyWith(
+            color: menuList[i].isSelected ? AppColors.primary200 : AppColors.white,
             fontSize: Sizes.TEXT_SIZE_16,
-            fontWeight:
-                menuList[i].isSelected ? FontWeight.bold : FontWeight.normal,
+            fontWeight: menuList[i].isSelected ? FontWeight.bold : FontWeight.normal,
           ),
         ),
       );
@@ -135,7 +133,7 @@ class _AppDrawerState extends State<AppDrawer> {
 
   Widget _buildFooterText() {
     TextTheme textTheme = Theme.of(context).textTheme;
-    TextStyle? footerTextStyle = textTheme.caption?.copyWith(
+    TextStyle? footerTextStyle = textTheme.labelSmall?.copyWith(
       color: AppColors.primaryText2,
       fontWeight: FontWeight.bold,
     );
@@ -171,7 +169,7 @@ class _AppDrawerState extends State<AppDrawer> {
                 style: footerTextStyle,
                 children: [
                   TextSpan(
-                    text: StringConst.DAVID_COBBINA + ". ",
+                    text: StringConst.author + ". ",
                     style: footerTextStyle?.copyWith(
                       decoration: TextDecoration.underline,
                       fontWeight: FontWeight.w900,

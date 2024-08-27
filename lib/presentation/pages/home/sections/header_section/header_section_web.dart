@@ -4,9 +4,7 @@ import 'package:nimbus/presentation/layout/adaptive.dart';
 import 'package:nimbus/presentation/pages/home/sections/header_section/widgets.dart';
 import 'package:nimbus/presentation/widgets/buttons/nimbus_button.dart';
 import 'package:nimbus/presentation/widgets/content_area.dart';
-import 'package:nimbus/presentation/widgets/buttons/nimbus_button_link.dart';
 import 'package:nimbus/presentation/widgets/spaces.dart';
-import 'package:nimbus/utils/functions.dart';
 import 'package:nimbus/values/values.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -21,8 +19,7 @@ class HeaderSectionWeb extends StatefulWidget {
   _HeaderSectionWebState createState() => _HeaderSectionWebState();
 }
 
-class _HeaderSectionWebState extends State<HeaderSectionWeb>
-    with SingleTickerProviderStateMixin {
+class _HeaderSectionWebState extends State<HeaderSectionWeb> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
 
   @override
@@ -56,16 +53,12 @@ class _HeaderSectionWebState extends State<HeaderSectionWeb>
       Sizes.TEXT_SIZE_56,
       md: Sizes.TEXT_SIZE_36,
     );
-    double bodyTextSize =
-        responsiveSize(context, bodyTextSizeSm, bodyTextSizeLg);
-    double socialTextSize =
-        responsiveSize(context, socialTextSizeSm, socialTextSizeLg);
+    double bodyTextSize = responsiveSize(context, bodyTextSizeSm, bodyTextSizeLg);
+    double socialTextSize = responsiveSize(context, socialTextSizeSm, socialTextSizeLg);
     double screenWidth = widthOfScreen(context);
     double contentAreaWidth = screenWidth;
-    TextStyle? bodyTextStyle =
-        textTheme.bodyText1?.copyWith(fontSize: bodyTextSize);
-    TextStyle? socialTitleStyle =
-        textTheme.subtitle1?.copyWith(fontSize: socialTextSize);
+    TextStyle? bodyTextStyle = textTheme.bodyMedium?.copyWith(fontSize: bodyTextSize);
+    TextStyle? socialTitleStyle = textTheme.titleMedium?.copyWith(fontSize: socialTextSize);
 
     List<Widget> cardsForTabletView = buildCardRow(
       context: context,
@@ -88,8 +81,7 @@ class _HeaderSectionWebState extends State<HeaderSectionWeb>
     double sizeOfBlobSm = screenWidth * 0.3;
     double sizeOfGoldenGlobe = screenWidth * 0.2;
     double dottedGoldenGlobeOffset = sizeOfBlobSm * 0.4;
-    double heightOfBlobAndGlobe =
-        computeHeight(dottedGoldenGlobeOffset, sizeOfGoldenGlobe, sizeOfBlobSm);
+    double heightOfBlobAndGlobe = computeHeight(dottedGoldenGlobeOffset, sizeOfGoldenGlobe, sizeOfBlobSm);
     double heightOfStack = heightOfBlobAndGlobe * 2;
     double blobOffset = heightOfStack * 0.3;
     return ContentArea(
@@ -144,15 +136,14 @@ class _HeaderSectionWebState extends State<HeaderSectionWeb>
                     margin: EdgeInsets.only(top: heightOfStack * 0.05),
                     child: SelectableText(
                       StringConst.FIRST_NAME,
-                      style: textTheme.headline1?.copyWith(
+                      style: textTheme.displayLarge?.copyWith(
                         color: AppColors.grey50,
                         fontSize: headerIntroTextSize * 2,
                       ),
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(
-                        top: heightOfStack * 0.2, left: (sizeOfBlobSm * 0.35)),
+                    margin: EdgeInsets.only(top: heightOfStack * 0.2, left: (sizeOfBlobSm * 0.35)),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
@@ -161,14 +152,13 @@ class _HeaderSectionWebState extends State<HeaderSectionWeb>
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             ConstrainedBox(
-                              constraints:
-                                  BoxConstraints(maxWidth: screenWidth),
+                              constraints: BoxConstraints(maxWidth: screenWidth),
                               child: AnimatedTextKit(
                                 animatedTexts: [
                                   TypewriterAnimatedText(
                                     StringConst.INTRO,
                                     speed: Duration(milliseconds: 60),
-                                    textStyle: textTheme.headline2?.copyWith(
+                                    textStyle: textTheme.displayMedium?.copyWith(
                                       fontSize: headerIntroTextSize,
                                     ),
                                   ),
@@ -179,14 +169,13 @@ class _HeaderSectionWebState extends State<HeaderSectionWeb>
                               ),
                             ),
                             ConstrainedBox(
-                              constraints:
-                                  BoxConstraints(maxWidth: screenWidth),
+                              constraints: BoxConstraints(maxWidth: screenWidth),
                               child: AnimatedTextKit(
                                 animatedTexts: [
                                   TypewriterAnimatedText(
                                     StringConst.POSITION,
                                     speed: Duration(milliseconds: 80),
-                                    textStyle: textTheme.headline2?.copyWith(
+                                    textStyle: textTheme.displayMedium?.copyWith(
                                       fontSize: headerIntroTextSize,
                                       color: AppColors.primaryColor,
                                       height: 1.2,
@@ -200,8 +189,7 @@ class _HeaderSectionWebState extends State<HeaderSectionWeb>
                             ),
                             SpaceH16(),
                             ConstrainedBox(
-                              constraints:
-                                  BoxConstraints(maxWidth: screenWidth * 0.35),
+                              constraints: BoxConstraints(maxWidth: screenWidth * 0.35),
                               child: SelectableText(
                                 StringConst.ABOUT_DEV,
                                 style: bodyTextStyle?.copyWith(height: 1.5),
@@ -302,9 +290,7 @@ class _HeaderSectionWebState extends State<HeaderSectionWeb>
                           ),
                         ),
                       );
-                    } else if (screenWidth >=
-                            RefinedBreakpoints().tabletNormal &&
-                        screenWidth <= 1024) {
+                    } else if (screenWidth >= RefinedBreakpoints().tabletNormal && screenWidth <= 1024) {
                       return Wrap(
                         runSpacing: 24,
                         children: [

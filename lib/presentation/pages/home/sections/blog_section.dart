@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dots_indicator/dots_indicator.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide CarouselController;
 import 'package:nimbus/presentation/layout/adaptive.dart';
 import 'package:nimbus/presentation/widgets/blog_card.dart';
 import 'package:nimbus/presentation/widgets/buttons/nimbus_button.dart';
@@ -27,8 +27,7 @@ class _BlogSectionState extends State<BlogSection> {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    EdgeInsetsGeometry padding =
-        EdgeInsets.symmetric(horizontal: getSidePadding(context));
+    EdgeInsetsGeometry padding = EdgeInsets.symmetric(horizontal: getSidePadding(context));
     double headerIntroTextSize = responsiveSize(
       context,
       Sizes.TEXT_SIZE_36,
@@ -36,8 +35,7 @@ class _BlogSectionState extends State<BlogSection> {
       md: Sizes.TEXT_SIZE_36,
     );
     double screenWidth = widthOfScreen(context) - (getSidePadding(context) * 2);
-    double contentAreaWidth =
-        responsiveSize(context, screenWidth, screenWidth * 0.6);
+    double contentAreaWidth = responsiveSize(context, screenWidth, screenWidth * 0.6);
 
     return Stack(
       children: [
@@ -46,7 +44,7 @@ class _BlogSectionState extends State<BlogSection> {
           right: 0,
           child: SelectableText(
             StringConst.BLOGGING,
-            style: textTheme.headline1?.copyWith(
+            style: textTheme.displayLarge?.copyWith(
               color: AppColors.grey50,
               fontSize: headerIntroTextSize * 2,
             ),
@@ -121,8 +119,7 @@ class _BlogSectionState extends State<BlogSection> {
                       height: screenWidth + 250,
                       child: CarouselSlider.builder(
                         itemCount: blogLength,
-                        itemBuilder: (BuildContext context, int index,
-                            int pageViewIndex) {
+                        itemBuilder: (BuildContext context, int index, int pageViewIndex) {
                           return BlogCard(
                             width: screenWidth,
                             imageWidth: screenWidth,
@@ -138,9 +135,7 @@ class _BlogSectionState extends State<BlogSection> {
                         options: carouselOptions(),
                       ),
                     );
-                  } else if (widthOfScreen >=
-                          RefinedBreakpoints().tabletLarge &&
-                      widthOfScreen <= 1024) {
+                  } else if (widthOfScreen >= RefinedBreakpoints().tabletLarge && widthOfScreen <= 1024) {
                     return Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
@@ -149,8 +144,7 @@ class _BlogSectionState extends State<BlogSection> {
                           child: CarouselSlider.builder(
                             itemCount: blogLength,
                             carouselController: _carouselController,
-                            itemBuilder: (BuildContext context, int index,
-                                int pageViewIndex) {
+                            itemBuilder: (BuildContext context, int index, int pageViewIndex) {
                               return BlogCard(
                                 width: screenWidth * 0.45,
                                 imageWidth: screenWidth * 0.45,

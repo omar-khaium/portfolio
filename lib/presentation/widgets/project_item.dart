@@ -54,8 +54,7 @@ class ProjectItem extends StatefulWidget {
   _ProjectItemState createState() => _ProjectItemState();
 }
 
-class _ProjectItemState extends State<ProjectItem>
-    with TickerProviderStateMixin {
+class _ProjectItemState extends State<ProjectItem> with TickerProviderStateMixin {
   late AnimationController _slideFadeController;
   late AnimationController _indicatorController;
   late Animation<double> _indicatorAnimation;
@@ -89,8 +88,7 @@ class _ProjectItemState extends State<ProjectItem>
         curve: Curves.easeIn,
       ),
     );
-    _slideAnimation =
-        Tween<Offset>(begin: Offset(0, -0.1), end: Offset(0, 0)).animate(
+    _slideAnimation = Tween<Offset>(begin: Offset(0, -0.1), end: Offset(0, 0)).animate(
       CurvedAnimation(
         parent: _slideFadeController,
         curve: Curves.easeIn,
@@ -208,7 +206,7 @@ class ProjectCover extends StatelessWidget {
               Text(
                 title,
                 style: titleStyle ??
-                    textTheme.headline6?.copyWith(
+                    textTheme.headlineSmall?.copyWith(
                       color: AppColors.white,
                     ),
               ),
@@ -216,7 +214,7 @@ class ProjectCover extends StatelessWidget {
               Text(
                 subtitle,
                 style: subtitleStyle ??
-                    textTheme.subtitle2?.copyWith(
+                    textTheme.titleSmall?.copyWith(
                       color: AppColors.white,
                       fontSize: Sizes.TEXT_SIZE_16,
                     ),

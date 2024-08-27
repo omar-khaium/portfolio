@@ -40,8 +40,7 @@ class AnimatedNimbusButton extends StatefulWidget {
       topLeft: Radius.circular(4),
       bottomLeft: Radius.circular(4),
     ),
-    this.trailingButtonHoverBorderRadius =
-        const BorderRadius.all(Radius.circular(4)),
+    this.trailingButtonHoverBorderRadius = const BorderRadius.all(Radius.circular(4)),
     this.trailingButtonBorderRadius = const BorderRadius.only(
       topRight: Radius.circular(4),
       bottomRight: Radius.circular(4),
@@ -74,9 +73,7 @@ class _AnimatedNimbusButtonState extends State<AnimatedNimbusButton> {
                   duration: Duration(milliseconds: 300),
                   curve: widget.curve,
                   decoration: BoxDecoration(
-                    borderRadius: _isHovering
-                        ? widget.trailingButtonHoverBorderRadius
-                        : widget.trailingButtonBorderRadius,
+                    borderRadius: _isHovering ? widget.trailingButtonHoverBorderRadius : widget.trailingButtonBorderRadius,
                     color: widget.trailingButtonColor,
                   ),
                 ),
@@ -94,8 +91,8 @@ class _AnimatedNimbusButtonState extends State<AnimatedNimbusButton> {
                         child: Text(
                           widget.title,
                           style: widget.titleStyle ??
-                              textTheme.button?.copyWith(
-                                color:_isHovering ? widget.titleColor : Colors.transparent,
+                              textTheme.labelLarge?.copyWith(
+                                color: _isHovering ? widget.titleColor : Colors.transparent,
                                 fontSize: Sizes.TEXT_SIZE_14,
                               ),
                         ),
@@ -110,9 +107,7 @@ class _AnimatedNimbusButtonState extends State<AnimatedNimbusButton> {
                     width: widget.leadingButtonWidth,
                     height: widget.height,
                     decoration: BoxDecoration(
-                      borderRadius: _isHovering
-                          ? widget.leadingButtonHoverBorderRadius
-                          : widget.leadingButtonBorderRadius,
+                      borderRadius: _isHovering ? widget.leadingButtonHoverBorderRadius : widget.leadingButtonBorderRadius,
                       color: widget.leadingButtonColor,
                     ),
                     child: Center(

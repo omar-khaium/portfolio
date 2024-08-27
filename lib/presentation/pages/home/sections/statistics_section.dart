@@ -5,7 +5,6 @@ import 'package:nimbus/values/values.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
-
 class StatItemData {
   final int value;
   final String subtitle;
@@ -19,8 +18,7 @@ class StatisticsSection extends StatefulWidget {
   _StatisticsSectionState createState() => _StatisticsSectionState();
 }
 
-class _StatisticsSectionState extends State<StatisticsSection>
-    with SingleTickerProviderStateMixin {
+class _StatisticsSectionState extends State<StatisticsSection> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
 
   @override
@@ -40,8 +38,7 @@ class _StatisticsSectionState extends State<StatisticsSection>
 
   @override
   Widget build(BuildContext context) {
-    double contentAreaWidth =
-        widthOfScreen(context) - (getSidePadding(context) * 2);
+    double contentAreaWidth = widthOfScreen(context) - (getSidePadding(context) * 2);
     return VisibilityDetector(
       key: Key('statistics-section'),
       onVisibilityChanged: (visibilityInfo) {
@@ -67,8 +64,7 @@ class _StatisticsSectionState extends State<StatisticsSection>
               if (screenWidth < (RefinedBreakpoints().tabletLarge)) {
                 return Container(
                   width: contentAreaWidth,
-                  padding:
-                      const EdgeInsets.symmetric(vertical: Sizes.PADDING_40),
+                  padding: const EdgeInsets.symmetric(vertical: Sizes.PADDING_40),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -104,14 +100,12 @@ class _StatisticsSectionState extends State<StatisticsSection>
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: Sizes.PADDING_40),
+                        padding: const EdgeInsets.symmetric(vertical: Sizes.PADDING_40),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Spacer(),
-                            ..._buildItems(Data.statItemsData,
-                                isHorizontal: true),
+                            ..._buildItems(Data.statItemsData, isHorizontal: true),
                             Spacer(),
                           ],
                         ),
@@ -204,7 +198,7 @@ class StatItem extends StatelessWidget {
         Text(
           "$value",
           style: titleStyle ??
-              textTheme.headline3?.copyWith(
+              textTheme.displaySmall?.copyWith(
                 color: titleColor,
               ),
         ),
@@ -212,7 +206,7 @@ class StatItem extends StatelessWidget {
         Text(
           subtitle,
           style: subtitleStyle ??
-              textTheme.bodyText1?.copyWith(
+              textTheme.bodyMedium?.copyWith(
                 color: subtitleColor,
                 fontSize: 16,
               ),

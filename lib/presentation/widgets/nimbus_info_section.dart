@@ -40,7 +40,7 @@ class NimbusInfoSection1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    TextStyle? titleStyle = textTheme.headline3?.copyWith(
+    TextStyle? titleStyle = textTheme.displaySmall?.copyWith(
       fontSize: responsiveSize(context, 26, 36, md: 32),
     );
     double fontSize = responsiveSize(context, 16, 18);
@@ -55,7 +55,7 @@ class NimbusInfoSection1 extends StatelessWidget {
                   quarterTurns: quarterTurns,
                   child: Text(
                     sectionTitle,
-                    style: textTheme.bodyText2?.copyWith(
+                    style: textTheme.bodySmall?.copyWith(
                       fontSize: fontSize,
                       fontWeight: FontWeight.w400,
                       color: AppColors.grey250,
@@ -100,8 +100,7 @@ class NimbusInfoSection1 extends StatelessWidget {
                   SpaceH20(),
                   Text(
                     body,
-                    style: textTheme.bodyText1
-                        ?.copyWith(fontSize: fontSize, height: 1.8),
+                    style: textTheme.bodyMedium?.copyWith(fontSize: fontSize, height: 1.8),
                   ),
                   child != null ? SpaceH30() : Empty(),
                   child ?? Empty(),
@@ -149,7 +148,7 @@ class NimbusInfoSection2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    TextStyle? titleStyle = textTheme.headline3?.copyWith(
+    TextStyle? titleStyle = textTheme.displaySmall?.copyWith(
       fontSize: responsiveSize(context, 26, 48, md: 32),
     );
     double fontSize = responsiveSize(context, 16, 18);
@@ -169,7 +168,7 @@ class NimbusInfoSection2 extends StatelessWidget {
             SpaceW16(),
             Text(
               sectionTitle,
-              style: textTheme.bodyText2?.copyWith(
+              style: textTheme.bodySmall?.copyWith(
                 fontSize: fontSize,
                 fontWeight: FontWeight.w400,
                 color: AppColors.grey250,
@@ -205,8 +204,7 @@ class NimbusInfoSection2 extends StatelessWidget {
             SpaceH20(),
             Text(
               body,
-              style: textTheme.bodyText1
-                  ?.copyWith(fontSize: fontSize, height: 1.8),
+              style: textTheme.bodyMedium?.copyWith(fontSize: fontSize, height: 1.8),
             ),
             child != null ? SpaceH30() : Empty(),
             child ?? Empty(),

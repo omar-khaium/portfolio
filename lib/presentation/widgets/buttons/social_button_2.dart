@@ -61,8 +61,7 @@ class SocialButton2 extends StatefulWidget {
   _SocialButton2State createState() => _SocialButton2State();
 }
 
-class _SocialButton2State extends State<SocialButton2>
-    with SingleTickerProviderStateMixin {
+class _SocialButton2State extends State<SocialButton2> with SingleTickerProviderStateMixin {
   bool _isHovering = false;
   late AnimationController controller;
   late Animation<Color?> animation;
@@ -86,11 +85,12 @@ class _SocialButton2State extends State<SocialButton2>
     ).animate(controller);
   }
 
-@override
+  @override
   void dispose() {
     controller.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
@@ -109,9 +109,7 @@ class _SocialButton2State extends State<SocialButton2>
               duration: Duration(milliseconds: 400),
               curve: Curves.easeOut,
               decoration: BoxDecoration(
-                  color: _isHovering
-                      ? widget.hoverButtonColor
-                      : widget.buttonColor,
+                  color: _isHovering ? widget.hoverButtonColor : widget.buttonColor,
                   borderRadius: BorderRadius.all(Radius.circular(4))),
               child: MaterialButton(
                 onPressed: widget.onPressed,
@@ -126,9 +124,9 @@ class _SocialButton2State extends State<SocialButton2>
             Text(
               widget.title,
               style: widget.titleStyle ??
-                  textTheme.subtitle2?.copyWith(
+                  textTheme.titleSmall?.copyWith(
                     fontSize: Sizes.TEXT_SIZE_13,
-                    color:  animation.value,
+                    color: animation.value,
                   ),
             ),
           ],

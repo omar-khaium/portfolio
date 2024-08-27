@@ -31,8 +31,7 @@ class ProjectsSection extends StatefulWidget {
   _ProjectsSectionState createState() => _ProjectsSectionState();
 }
 
-class _ProjectsSectionState extends State<ProjectsSection>
-    with SingleTickerProviderStateMixin {
+class _ProjectsSectionState extends State<ProjectsSection> with SingleTickerProviderStateMixin {
   late AnimationController _projectController;
   late Animation<double> _projectScaleAnimation;
   List<List<ProjectData>> projects = [
@@ -97,8 +96,7 @@ class _ProjectsSectionState extends State<ProjectsSection>
           double screenWidth = sizingInformation.screenSize.width;
           if (screenWidth < (RefinedBreakpoints().tabletLarge)) {
             return Container(
-              padding:
-                  EdgeInsets.symmetric(horizontal: getSidePadding(context)),
+              padding: EdgeInsets.symmetric(horizontal: getSidePadding(context)),
               child: ContentArea(
                 width: contentAreaWidth,
                 child: Column(
@@ -230,15 +228,10 @@ class _ProjectsSectionState extends State<ProjectsSection>
         ScaleTransition(
           scale: _projectScaleAnimation,
           child: ProjectItem(
-            width: isMobile
-                ? assignWidth(context, data[index].mobileWidth)
-                : assignWidth(context, data[index].width),
-            height: isMobile
-                ? assignHeight(context, data[index].mobileHeight)
-                : assignHeight(context, data[index].height),
-            bannerHeight: isMobile
-                ? assignHeight(context, data[index].mobileHeight) / 2
-                : assignHeight(context, data[index].height) / 3,
+            width: isMobile ? assignWidth(context, data[index].mobileWidth) : assignWidth(context, data[index].width),
+            height: isMobile ? assignHeight(context, data[index].mobileHeight) : assignHeight(context, data[index].height),
+            bannerHeight:
+                isMobile ? assignHeight(context, data[index].mobileHeight) / 2 : assignHeight(context, data[index].height) / 3,
             title: data[index].title,
             subtitle: data[index].category,
             imageUrl: data[index].projectCoverUrl,
@@ -299,8 +292,7 @@ class ProjectCategory extends StatefulWidget {
   _ProjectCategoryState createState() => _ProjectCategoryState();
 }
 
-class _ProjectCategoryState extends State<ProjectCategory>
-    with SingleTickerProviderStateMixin {
+class _ProjectCategoryState extends State<ProjectCategory> with SingleTickerProviderStateMixin {
   bool _isHovering = false;
   late AnimationController _controller;
   late Color color;
@@ -338,7 +330,7 @@ class _ProjectCategoryState extends State<ProjectCategory>
                 style: widget.titleStyle?.copyWith(
                       color: colorOfCategory(),
                     ) ??
-                    textTheme.subtitle1?.copyWith(
+                    textTheme.titleMedium?.copyWith(
                       fontSize: Sizes.TEXT_SIZE_16,
                       color: colorOfCategory(),
                     ),
@@ -369,7 +361,7 @@ class _ProjectCategoryState extends State<ProjectCategory>
         style: widget.numberStyle?.copyWith(
               color: widget.hoverColor,
             ) ??
-            textTheme.subtitle1?.copyWith(
+            textTheme.titleMedium?.copyWith(
               fontSize: Sizes.TEXT_SIZE_16,
               color: widget.hoverColor,
             ),
