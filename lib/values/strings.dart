@@ -178,7 +178,7 @@ class StringConst {
   static const String author = "David Cobbina";
   static const String DESIGNED_BY = "Designed by";
   static const String WEB_GENIUS_LAB = "WebGeniusLab";
-  static const String MADE_IN_GHANA = "Made in";
+  static const String MADE_IN_BANGLADESH = "Made in";
   static const String WITH_LOVE = "with";
   static const String FIND_ME = "Find me on..";
 

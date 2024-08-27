@@ -16,6 +16,7 @@ class Nimbus extends StatelessWidget {
   Widget build(BuildContext context) {
     return Layout(
       child: MaterialApp.router(
+        themeMode: ThemeMode.light,
         title: StringConst.APP_NAME,
         theme: AppTheme.lightThemeData,
         debugShowCheckedModeBanner: false,

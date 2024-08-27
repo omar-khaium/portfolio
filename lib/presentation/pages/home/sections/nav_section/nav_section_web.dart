@@ -36,10 +36,8 @@ class NavSectionWeb extends StatefulWidget {
 class _NavSectionWebState extends State<NavSectionWeb> {
   @override
   Widget build(BuildContext context) {
-    double logoSpaceLeft =
-        responsiveSize(context, logoSpaceLeftSm, logoSpaceLeftLg);
-    double logoSpaceRight =
-        responsiveSize(context, logoSpaceRightSm, logoSpaceRightLg);
+    double logoSpaceLeft = responsiveSize(context, logoSpaceLeftSm, logoSpaceLeftLg);
+    double logoSpaceRight = responsiveSize(context, logoSpaceRightSm, logoSpaceRightLg);
     double contactBtnSpaceLeft = responsiveSize(
       context,
       contactButtonSpaceLeftSm,
@@ -77,7 +75,7 @@ class _NavSectionWebState extends State<NavSectionWeb> {
             InkWell(
               onTap: () {},
               child: Image.asset(
-                ImagePath.LOGO_DARK,
+                ImagePath.LOGO_LIGHT,
                 height: Sizes.HEIGHT_52,
               ),
             ),
@@ -104,7 +102,7 @@ class _NavSectionWebState extends State<NavSectionWeb> {
             ),
             NimbusVerticalDivider(),
             SizedBox(width: contactBtnSpaceLeft),
-             NimbusButton(
+            NimbusButton(
               buttonTitle: StringConst.CONTACT_ME,
               width: contactBtnWidth,
               // onPressed: () => openUrlLink(StringConst.EMAIL_URL),
@@ -159,7 +157,6 @@ class _NavSectionWebState extends State<NavSectionWeb> {
         SocialButton(
           tag: socialItems[index].tag,
           iconData: socialItems[index].iconData,
-          
           onPressed: () => openUrlLink(socialItems[index].url),
         ),
         // NimBusLink(
